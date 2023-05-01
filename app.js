@@ -19,7 +19,7 @@ app.event('message', async ({ event, client }) => {
       // Send a loading message
       const loadingMessageResponse = await client.chat.postMessage({
         channel: event.channel,
-        text: 'Processing your request...',
+        text: 'Thinking...',
         blocks: [
           {
             type: 'section',
