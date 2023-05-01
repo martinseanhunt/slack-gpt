@@ -31,8 +31,25 @@ app.event('message', async ({ event, client }) => {
         ],
       });
 
+      // Fetch the last 6 messages in the conversation history
+      const historyResult = await client.conversations.history({
+        channel: event.channel,
+        latest: event.ts, // Fetch history up to the current message timestamp
+        inclusive: false, // Exclude the current message from the history
+        limit: 6, // Limit the number of messages fetched
+      });
+
+      // Create a new array of QUESTION, RESPONSE strings to pass to the LLM
+      const formattedHistory = historyResult.messages
+        .map((message) => {
+          const messageType =
+            message.user === event.user ? 'USER MESSAGE' : 'SYSTEM RESPONSE';
+          return `${messageType}:${message.text}`;
+        })
+        .reverse();
+
       // Get a response from the LLM
-      const response = await getLLMResponse(event.text);
+      const response = await getLLMResponse(event.text, formattedHistory);
 
       // TODO: Investigate streaming a response
 

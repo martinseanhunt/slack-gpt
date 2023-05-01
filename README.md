@@ -6,6 +6,5 @@ A simple starter for a Slack app / chatbot that uses Langchain, openAI and a Pin
 
 - Document installation, setup and customisation
 - Document deployment
-- Investigate implementing history
 - Investigate implementing response streaming
 - Better loading state

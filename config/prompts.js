@@ -11,8 +11,7 @@ Answer in formatted mrkdwn, use only Slack-compatible mrkdwn, such as bold (*tex
 Answer in Slack-compatible mrkdwn:
 `;
 
-// Not currently being utilised, will be used when history is implemented
-export const CONDENSE_PROMPT = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
+export const CONDENSE_PROMPT = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question. If the follow up question is not closesly related to the chat history, the chat history must be ignored when generating the standalone question and your job is to repeat the follow up question exactly. 
 
 Chat History:
 {chat_history}
