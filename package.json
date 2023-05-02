@@ -13,6 +13,8 @@
     "@pinecone-database/pinecone": "^0.0.14",
     "@slack/bolt": "^3.13.1",
     "dotenv": "^16.0.3",
-    "langchain": "^0.0.67"
+    "langchain": "^0.0.67",
+    "node-html-markdown": "^1.3.0",
+    "puppeteer": "^19.11.1"
   }
 }
