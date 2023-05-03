@@ -7,7 +7,9 @@
 3. [Creating and installing the application](#creating-and-installing-the-application)
 4. [Configuration](#configuration)
 5. [Starting the app](#starting-the-app)
-6. [TODO's](#todo)
+6. [Next Steps](#next-steps)
+7. [Sample Implementations](#sample-implementations)
+8. [TODO's](#todo)
 
 ## Introduction
 
@@ -76,9 +78,12 @@ settings:
 - Try editing the prompts for your use case which can be found in `/config/prompts.js`
 - Set up a production employment and start your bot on a server somewhere other than your local machine - https://render.com/ is a good, simple option for this.
 
+## Sample implementations
+
+1. [**HR assistant**](https://github.com/martinseanhunt/slack-gpt-hr-bot): A helpful slack bot that ingests data from a companies confluence space to provide HR assistance, includes full ingestsion pipeline.
+
 ## TODO
 
-- Add example data ingestion with langchain and pinecone
 - Document deployment process
 - Investigate implementing response streaming
 - Better loading state
